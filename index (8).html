@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>고생대의 환경과 생물 | 통합과학 탐험</title>
+<style>
+:root{--ink:#eaf4ff;--muted:#b7c8df;--panel:#10233be8;--line:#426080;--cyan:#66e4e8;--gold:#ffd782;--coral:#ff8d79;--blue:#6fb9ff;--green:#9ce7b0}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:#07111f;color:var(--ink);font-family:system-ui,-apple-system,"Malgun Gothic",sans-serif;line-height:1.65;overflow-x:hidden}
+body:before{content:"";position:fixed;inset:0;pointer-events:none;z-index:-1;background:radial-gradient(circle at 15% 10%,#163a5b 0,transparent 32%),radial-gradient(circle at 85% 35%,#30234c 0,transparent 32%),linear-gradient(180deg,#07111f,#09182a 65%,#101b2b)}
+.stars,.stars:before,.stars:after{position:fixed;inset:0;pointer-events:none;content:"";z-index:-1;background-image:radial-gradient(2px 2px at 12% 21%,#fff,transparent),radial-gradient(1px 1px at 72% 16%,#9be9ff,transparent),radial-gradient(2px 2px at 43% 64%,#fff,transparent),radial-gradient(1px 1px at 88% 77%,#fff,transparent),radial-gradient(1px 1px at 29% 89%,#9be9ff,transparent);background-size:290px 250px;animation:twinkle 5s ease-in-out infinite alternate}.stars:before{opacity:.45;transform:translateY(40px);animation:drift 24s linear infinite}.stars:after{opacity:.5;transform:scale(1.3);animation:twinkle 7s ease-in-out infinite alternate-reverse}
+@keyframes twinkle{from{opacity:.3}to{opacity:.9}}@keyframes drift{to{transform:translateY(-80px)}}
+header{min-height:82vh;display:grid;place-items:center;text-align:center;padding:64px 20px 40px;position:relative;overflow:hidden}
+.hero-inner{max-width:1050px;position:relative;z-index:1}.eyebrow{color:var(--cyan);font-weight:800;letter-spacing:.22em;font-size:.8rem;text-transform:uppercase}
+h1{font-size:clamp(2.6rem,7vw,6rem);line-height:1.04;margin:16px 0;background:linear-gradient(100deg,#fff,#86eff0 48%,#ffd782);-webkit-background-clip:text;color:transparent;letter-spacing:-.055em}
+.lead{max-width:700px;margin:18px auto;color:var(--muted);font-size:clamp(1rem,2vw,1.2rem)}
+.hero-art{width:min(760px,95vw);margin:22px auto 0;filter:drop-shadow(0 18px 30px #0007)}
+.pulse{animation:pulse 3s ease-in-out infinite;transform-origin:center}@keyframes pulse{50%{opacity:.55;transform:scale(1.025)}}
+nav{position:sticky;top:0;z-index:20;background:#081525eF;backdrop-filter:blur(18px);border-block:1px solid #263d58;display:flex;justify-content:center;gap:8px;padding:12px;flex-wrap:wrap}
+.tab{border:1px solid #35506c;background:#102238;color:#c9d9ed;border-radius:999px;padding:10px 22px;font-weight:750;cursor:pointer;transition:.25s}
+.tab[aria-selected="true"],.tab:hover{background:linear-gradient(100deg,#2e7288,#3d557d);color:white;border-color:#82e6e7;box-shadow:0 0 20px #52d7dc2b}
+main{max-width:1160px;margin:auto;padding:28px 20px 70px}.panel{display:none;animation:appear .45s ease}.panel.active{display:block}@keyframes appear{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
+.section-head{display:flex;align-items:end;justify-content:space-between;gap:18px;margin:30px 0 18px}.section-head h2{font-size:clamp(1.7rem,4vw,2.5rem);line-height:1.15;margin:0}.section-head p{color:var(--muted);margin:0;max-width:450px}
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}.card{background:linear-gradient(145deg,#122942ed,#0c1c30ed);border:1px solid #29435f;border-radius:24px;padding:20px;box-shadow:0 15px 35px #0002;overflow:visible;position:relative}.card:after{content:"";position:absolute;inset:0;pointer-events:none;border-radius:inherit;background:linear-gradient(130deg,#ffffff08,transparent 40%)}.card h3{margin:0 0 6px;font-size:1.25rem}.tag{display:inline-block;font-size:.75rem;color:#071521;background:var(--cyan);padding:2px 9px;border-radius:999px;font-weight:850;margin-bottom:9px}.tag.warm{background:var(--coral)}.tag.cool{background:var(--blue)}.tag.land{background:var(--green)}.tag.ocean{background:#79caff}.copy{color:#d1dfef;font-size:.94rem;margin:8px 0 0}.copy strong{color:#fff}.visual{width:100%;display:block;margin:12px auto 4px;max-height:270px}.visual.tall{max-height:340px}.caption{font-size:.78rem;color:#8fa9c7;margin-top:8px}.wide{grid-column:1/-1}.timeline{display:flex;gap:5px;margin:18px 0 8px;align-items:stretch}.era{flex:1;min-width:0;text-align:center;padding:9px 3px;border-radius:10px;background:#1d344d;color:#b5c8dd;font-size:.75rem;border:1px solid #314a64}.era.paleo{flex:1.1;background:linear-gradient(130deg,#f2b95f,#ef775f);color:#182337;font-weight:900;box-shadow:0 0 22px #ffb85b4a}.mini{font-size:.8rem;color:var(--muted)}.split{display:grid;grid-template-columns:1fr 1fr;gap:12px}.pill-row{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}.pill{border:1px solid #42617f;color:#c8dced;border-radius:999px;padding:5px 10px;font-size:.8rem}.ocean-card{border-top:3px solid #69caff}.land-card{border-top:3px solid #9ce7b0}.flow{display:flex;align-items:center;justify-content:center;gap:12px;flex-wrap:wrap;margin:14px 0}.flow-box{flex:1;min-width:130px;text-align:center;background:#172f48;border:1px solid #3a5d7b;border-radius:15px;padding:10px}.arrow{font-size:1.8rem;color:var(--gold);font-weight:900}.graph-label{display:flex;justify-content:space-between;color:#a9bed6;font-size:.76rem}.tip{font-size:.78rem;color:#a9bed6;margin-top:8px}.source-list{font-size:.85rem;color:#b8c8db;padding-left:20px}.source-list li{margin:5px 0}footer{text-align:center;border-top:1px solid #253d57;padding:28px 20px 38px;color:#9bb0c9;background:#07111f}.creator{font-size:1.1rem;color:#f6d58d;font-weight:800;margin-top:12px}
+svg text{font-family:system-ui,"Malgun Gothic",sans-serif}.creature{cursor:help;transition:filter .2s}.creature:hover{filter:drop-shadow(0 0 8px #8cefff)}.swim{animation:swim 5s ease-in-out infinite;transform-origin:center}.swim2{animation:swim 6s ease-in-out infinite reverse;transform-origin:center}@keyframes swim{0%,100%{transform:translateX(-5px) translateY(0)}50%{transform:translateX(8px) translateY(-4px)}}
+.landmove{animation:continent 10s ease-in-out infinite alternate;transform-origin:center}@keyframes continent{from{transform:translateX(-7px) rotate(-2deg)}to{transform:translateX(10px) rotate(2deg)}}
+.fillbar{animation:fillup 3s ease-out both;transform-origin:bottom}@keyframes fillup{from{transform:scaleY(.05)}to{transform:scaleY(1)}}
+.drop{stroke-dasharray:420;stroke-dashoffset:420;animation:drawdown 2.5s .4s ease-out forwards}@keyframes drawdown{to{stroke-dashoffset:0}}
+@media(max-width:760px){.grid{grid-template-columns:1fr}.wide{grid-column:auto}.section-head{display:block}.section-head p{margin-top:8px}.split{grid-template-columns:1fr}.timeline{flex-wrap:wrap}.era{flex:1 1 28%}header{min-height:75vh}.card{padding:16px}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation-duration:.01ms!important;animation-iteration-count:1!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+<div class="stars"></div>
+<header>
+ <div class="hero-inner">
+  <div class="eyebrow">INTEGRATED SCIENCE · GEOLOGICAL TIME</div>
+  <h1>고생대의 환경과 생물</h1>
+  <p class="lead">바다의 생명 폭발부터 초대륙의 탄생까지. 그림을 따라가며 약 2억 9천만 년의 지구를 탐험해 보자.</p>
+  <svg class="hero-art" viewBox="0 0 800 310" role="img" aria-label="고생대 바다와 해저 생물, 육상 식물을 그린 장면">
+   <defs><linearGradient id="sea" x2="0" y2="1"><stop stop-color="#2f9ab4"/><stop offset="1" stop-color="#102b51"/></linearGradient><linearGradient id="land" x2="0" y2="1"><stop stop-color="#a6d58e"/><stop offset="1" stop-color="#286b66"/></linearGradient></defs>
+   <path d="M0 80 Q130 30 250 83 T500 75 T800 70 V310 H0Z" fill="url(#sea)"/>
+   <path d="M0 245 Q160 220 300 255 T560 245 T800 238 V310 H0Z" fill="#173a4b"/>
+   <path d="M0 70 Q90 45 170 70 L200 91 180 112 110 105 65 120 0 110Z" fill="url(#land)"/>
+   <g class="creature swim" transform="translate(240 175)" title="삼엽충">
+    <ellipse cx="0" cy="0" rx="48" ry="24" fill="#d5b47b" stroke="#fff0c7" stroke-width="2"/><path d="M-37 -15 Q-50 0 -37 15 M-24 -20 Q-33 0 -24 20 M-11 -23 Q-18 0 -11 23 M2 -23 Q-4 0 2 23 M15 -21 Q9 0 15 21 M28 -17 Q23 0 28 17" fill="none" stroke="#73573f" stroke-width="3"/><path d="M-46 0H46" stroke="#73573f" stroke-width="3"/><circle cx="-35" cy="-3" r="3" fill="#13243b"/>
+   </g>
+   <g class="creature swim2" transform="translate(540 190)" title="갑주어">
+    <path d="M-58 0 Q-30 -38 17 -20 L53 0 18 20 Q-30 38 -58 0Z" fill="#a5c9d0" stroke="#e5faff" stroke-width="2"/><path d="M-35 -18L-25 17M-17 -24L-7 23M4 -23L12 21M24 -15L30 13" stroke="#517d91" stroke-width="3"/><path d="M50 0L69 -18 65 0 69 18Z" fill="#80aab6"/><circle cx="-35" cy="-4" r="3" fill="#12283d"/>
+   </g>
+   <g transform="translate(650 65)" stroke="#a7e0a6" stroke-width="7" stroke-linecap="round" fill="none"><path d="M0 110V10 M0 55L-30 30 M0 78L28 49 M0 32L22 12"/><circle cx="-30" cy="30" r="5" fill="#d4e8a5"/><circle cx="28" cy="49" r="5" fill="#d4e8a5"/><circle cx="22" cy="12" r="5" fill="#d4e8a5"/></g>
+   <g fill="#b4f5ff" opacity=".7"><circle cx="90" cy="150" r="3" class="pulse"/><circle cx="420" cy="120" r="2"/><circle cx="710" cy="215" r="3" class="pulse"/><circle cx="380" cy="220" r="2"/></g>
+   <text x="30" y="28" fill="#d7f6ff" font-size="15" font-weight="700">고생대의 바다와 육지</text>
+  </svg>
+  <p class="mini">아래 탭을 눌러 환경 · 생물 · 화석을 살펴보세요.</p>
+ </div>
+</header>
+<nav role="tablist" aria-label="탐험 주제">
+ <button class="tab" role="tab" aria-selected="true" aria-controls="environment" data-tab="environment">🌋 환경</button>
+ <button class="tab" role="tab" aria-selected="false" aria-controls="life" data-tab="life">🦎 생물</button>
+ <button class="tab" role="tab" aria-selected="false" aria-controls="fossils" data-tab="fossils">🪨 화석</button>
+</nav>
+<main>
+<section class="panel active" id="environment" role="tabpanel">
+ <div class="section-head"><h2>01 — 지구의 무대</h2><p>시간, 기후, 대기와 바다, 대륙의 움직임을 한눈에.</p></div>
+ <div class="grid">
+  <article class="card">
+   <span class="tag">① 시대 구분</span><h3>지질 시간 속 고생대</h3>
+   <div class="timeline" aria-label="지질 시대 연표"><div class="era">선캄브리아대</div><div class="era paleo">고생대<br>5.41억~2.52억 년 전</div><div class="era">중생대</div><div class="era">신생대</div></div>
+   <svg class="visual" viewBox="0 0 500 150" role="img" aria-label="고생대 구간이 강조된 지질 시간 띠">
+    <rect x="12" y="35" width="476" height="36" rx="9" fill="#243b53"/><rect x="210" y="35" width="102" height="36" rx="8" fill="#ff9c6c"/><path d="M210 25V82M312 25V82" stroke="#ffe2a4" stroke-width="2" stroke-dasharray="4 4"/><text x="20" y="96" fill="#a9c0d9" font-size="12">지구 탄생</text><text x="210" y="96" fill="#ffd6a3" font-size="12" font-weight="800">캄브리아기 대폭발</text><text x="365" y="96" fill="#a9c0d9" font-size="12">현재</text><text x="250" y="19" text-anchor="middle" fill="#fff" font-size="12">약 6.3%</text>
+    <path d="M210 111V125H312V111" fill="none" stroke="#ffb66e" stroke-width="2"/><text x="261" y="143" text-anchor="middle" fill="#ffe3b5" font-size="12">고생대 구간 강조</text>
+   </svg>
+   <p class="copy">시작·종료 시기: 약 5억 4100만 년 전부터 2억 5200만 년 전까지 이어졌다. 전체 지질 시대의 약 6.3% 차지한다. 고생대의 시작은 캄브리아기 대폭발(약 5억 4,100만 년 전)이다.</p>
+  </article>
+  <article class="card">
+   <span class="tag warm">② 기후</span><h3>온실에서 빙하로</h3>
+   <svg class="visual" viewBox="0 0 500 210" role="img" aria-label="온난한 붉은 환경에서 차가운 푸른 빙하 환경으로 변하는 그림">
+    <defs><linearGradient id="climate" x1="0" x2="1"><stop stop-color="#9d493c"/><stop offset=".49" stop-color="#e78d63"/><stop offset=".51" stop-color="#3c759b"/><stop offset="1" stop-color="#173d70"/></linearGradient></defs>
+    <rect x="8" y="12" width="484" height="180" rx="18" fill="url(#climate)"/>
+    <circle cx="90" cy="53" r="22" fill="#ffd77a"/><g stroke="#ffd77a" stroke-width="3"><path d="M90 19V9M90 97V87M56 53H45M135 53H124M66 29L58 21M114 77L122 85M114 29L122 21M66 77L58 85"/></g>
+    <path d="M8 135Q70 113 128 135T250 132V192H8Z" fill="#c96d50"/><path d="M250 145L300 75 335 111 376 53 492 139V192H250Z" fill="#bce8f4"/><path d="M300 75L315 98 335 111 376 53 395 98 420 111 445 126" fill="none" stroke="#f4ffff" stroke-width="4"/>
+    <text x="83" y="171" fill="#fff4dc" font-size="16" font-weight="800">온난기</text><text x="365" y="171" fill="#e5faff" font-size="16" font-weight="800">빙하기</text><path d="M225 50H270M260 41L270 50 260 59" stroke="#fff" stroke-width="3" fill="none"/>
+   </svg>
+   <p class="copy">온실 기후에서 빙하 기후로 반복 전이했다. 초기 캄브리아기~오르도비스기는 현재보다 이산화탄소 농도가 약 10배 정도 높았던 온난한 시기였으나, 오르도비스기 말 갑작스러운 한랭화와 빙하 평원이 나타났다.</p>
+   <p class="copy">오르도비스기 말 빙하기(약 4억 4천만 년 전)에는 거대한 빙원이 형성되어 해수면이 급격히 낮아졌다. 얕은 바다 서식지가 파괴되어 고생대 첫 번째 대멸종의 주요 원인이 되었다.</p>
+  </article>
+  <article class="card">
+   <span class="tag">③ 대기·해양 환경</span><h3>산소의 상승, 이산화탄소의 감소</h3>
+   <svg class="visual" viewBox="0 0 500 240" role="img" aria-label="고생대 대기 산소 농도의 대략적인 변화 경향을 나타낸 개념 그래프">
+    <path d="M54 20V196H470" stroke="#7792ae" stroke-width="2" fill="none"/><g stroke="#29435d" stroke-width="1"><path d="M54 60H470M54 105H470M54 150H470"/></g>
+    <g fill="#65d8d6"><rect class="fillbar" x="86" y="155" width="48" height="41" rx="5"/><rect class="fillbar" x="166" y="128" width="48" height="68" rx="5" style="animation-delay:.2s"/><rect class="fillbar" x="246" y="90" width="48" height="106" rx="5" style="animation-delay:.4s"/><rect class="fillbar" x="326" y="54" width="48" height="142" rx="5" style="animation-delay:.6s"/><rect class="fillbar" x="406" y="36" width="48" height="160" rx="5" style="animation-delay:.8s"/></g>
+    <path d="M110 150L190 122 270 83 350 47 430 28" fill="none" stroke="#ffd782" stroke-width="4" stroke-linecap="round" stroke-dasharray="5 7"/>
+    <g fill="#d6e8fa" font-size="12" text-anchor="middle"><text x="110" y="216">캄브리아기</text><text x="190" y="216">오르도비스기</text><text x="270" y="216">실루리아기</text><text x="350" y="216">데본기</text><text x="430" y="216">석탄기~페름기</text></g><text x="65" y="14" fill="#dffafa" font-size="13">산소 농도 변화 (개념도)</text>
+   </svg>
+   <p class="copy">광합성 생물의 활동으로 대기 산소가 장기적으로 증가했고, 고생대 후기 석탄기 무렵에는 산소 농도가 특히 높았던 것으로 추정된다. 이산화탄소와 산소 농도는 시기마다 변동했으므로, 아래 그래프는 정확한 측정값이 아닌 변화 경향을 단순화한 개념도이다.</p>
+   <p class="copy">초기와 중기에는 온난한 기후로 빙하가 녹아 해수면이 높아졌다.</p>
+   <p class="caption">막대는 변화 방향을 보여 주는 개념도이며, 정량 측정값은 아닙니다.</p>
+  </article>
+  <article class="card">
+   <span class="tag">④ 수륙 분포</span><h3>움직이는 대륙</h3>
+   <svg class="visual tall" viewBox="0 0 500 280" role="img" aria-label="흩어진 대륙이 움직여 판게아를 이루는 애니메이션">
+    <defs><radialGradient id="oceanbg"><stop stop-color="#1d6684"/><stop offset="1" stop-color="#102b4c"/></radialGradient></defs><rect x="8" y="8" width="484" height="264" rx="18" fill="url(#oceanbg)"/>
+    <ellipse cx="250" cy="145" rx="210" ry="106" fill="none" stroke="#65cbdc" opacity=".4" stroke-dasharray="5 8"/>
+    <g class="landmove" fill="#b8d48c" stroke="#e5e5a9" stroke-width="2"><path d="M74 82L105 53 142 61 156 87 135 112 105 106 92 127 67 110Z"/><path d="M183 54L214 40 242 62 230 88 203 93 177 75Z"/><path d="M322 68L355 51 387 69 379 103 345 112 317 94Z"/><path d="M128 166L163 145 192 165 187 202 159 224 136 204Z"/><path d="M249 154L283 132 312 148 327 182 302 210 270 200 252 177Z"/><path d="M371 167L408 146 433 169 420 203 390 216 367 195Z"/></g>
+    <path d="M90 136Q170 120 224 140T330 136T418 142" stroke="#b8f4ff" stroke-width="2" fill="none" stroke-dasharray="4 5"/>
+    <text x="250" y="250" text-anchor="middle" fill="#e7f7ff" font-size="13">초기~중기: 적도와 남반구 곳곳에 분산</text>
+   </svg>
+   <p class="copy">고생대 초기에는 여러 대륙이 나뉘어 있었고, 시간이 흐르며 대륙들이 점차 모여 페름기 무렵 초대륙 판게아를 형성했다. 대륙의 이동은 해안선과 해양 환경을 바꾸었으며, 페름기 말 시베리아 트랩의 대규모 화산 활동은 심각한 기후 변화를 일으킨 주요 원인으로 여겨진다.</p>
+  </article>
+  <article class="card wide">
+   <span class="tag warm">⑧ 시대 말 사건</span><h3>페름기 말 대멸종 — 생물 다양성의 급락</h3>
+   <svg class="visual" viewBox="0 0 800 250" role="img" aria-label="시대 말 생물 종 수가 급격히 떨어지는 그래프">
+    <path d="M70 20V205H770" stroke="#7792ae" stroke-width="2" fill="none"/><g stroke="#2c4560" stroke-width="1"><path d="M70 55H770M70 105H770M70 155H770"/></g>
+    <path d="M80 45 C170 40 230 58 300 48 S420 60 475 52 S550 45 610 55 L645 184 L755 192" fill="none" stroke="#ffbd74" stroke-width="7" stroke-linecap="round" stroke-linejoin="round" class="drop"/>
+    <path d="M645 184L755 192V205H645Z" fill="#ff796f" opacity=".25"/><text x="85" y="28" fill="#ffdb9b" font-size="13">생물 다양성 (개념도)</text><text x="570" y="225" fill="#ffd4cb" font-size="13">페름기 말</text><text x="690" y="177" fill="#ff8e85" font-size="13" font-weight="800">급락</text>
+   </svg>
+   <p class="copy">페름기 말에는 지구 역사상 가장 큰 규모의 대멸종이 일어났다. 해양 생물 종의 약 80~90%가 사라진 것으로 추정되며, 삼엽충은 이때 완전히 멸종했다. 멸종 비율은 연구와 집계 기준에 따라 달라질 수 있다.</p>
+   <p class="copy">주요 원인으로는 시베리아 트랩의 대규모 화산 활동이 꼽힌다. 이산화탄소 등 온실기체가 늘어 지구가 빠르게 더워졌고, 바다의 산소가 줄거나 바닷물이 산성화되는 등 여러 변화가 겹쳤을 가능성이 크다. 판게아 형성에 따른 해안선과 해류 변화도 영향을 주었을 수 있다.</p>
+   <p class="copy"><strong>그 결과 고생대는 어떻게 끝났을까?</strong> 약 2억 5,200만 년 전 페름기 말 대멸종으로 해양 생물 종의 대부분과 많은 육상 생물이 사라졌다. 삼엽충도 이때 완전히 멸종했다. 이후 생태계가 회복되며 중생대가 시작되었으므로, 고생대의 끝은 단순히 대륙이 모였기 때문이 아니라 대규모 환경 변화와 대멸종으로 설명할 수 있다.</p>
+  </article>
+  <article class="card wide">
+   <span class="tag">⑩ 환경 변화와 생물 변화</span><h3>환경이 바뀌면 생명도 바뀐다</h3>
+   <div class="flow"><div class="flow-box">산소 농도 상승<br><small>오존층 생성 · 육상 환경 변화</small></div><div class="arrow">→</div><div class="flow-box">식물의 육상 진출<br><small>새로운 서식 공간</small></div><div class="arrow">→</div><div class="flow-box">생물계 구조 변화<br><small>진화와 대멸종의 반복</small></div></div>
+   <p class="copy">광합성 생물이 산소를 늘리면서 오존층이 형성되어 지표에 도달하는 자외선이 줄었고, 이는 생물이 육상 환경에 적응하는 데 도움을 주었다. 식물은 고생대 초기에 육상으로 진출했으며, 이후 관다발식물과 숲이 발달했다. 대륙 이동과 기후 변화, 대멸종은 생물의 진화와 분포를 크게 바꾸었다.</p>
+   <div class="split">
+    <div class="flow-box"><svg viewBox="0 0 220 125" class="visual" role="img" aria-label="산소가 풍부한 고생대 대기"><circle cx="110" cy="55" r="43" fill="#21516a" stroke="#75e4e6" stroke-width="3"/><text x="110" y="53" fill="#fff" font-size="17" text-anchor="middle" font-weight="800">O₂</text><text x="110" y="74" fill="#d2fbff" font-size="13" text-anchor="middle">35%*</text><path d="M45 105H175" stroke="#6ba3b7" stroke-width="3"/></svg><b>산소 농도와 곤충</b><p class="copy">석탄기에는 대기 산소 농도가 현재보다 높아 약 30% 이상에 이르렀을 가능성이 제시된다. 곤충은 몸 옆의 기문과 기관으로 산소를 운반하며, 높은 산소 농도는 일부 절지동물이 크게 자라는 데 영향을 주었을 수 있다. 35%는 추정치 중 하나이지 확정된 단일 값은 아니다.</p></div>
+    <div class="flow-box"><svg viewBox="0 0 320 180" class="visual" role="img" aria-label="곤충의 기문과 가지처럼 퍼지는 기관, 조직에 산소를 전달하는 기관계 개념도">
+      <defs><linearGradient id="insectBody" x2="0" y2="1"><stop stop-color="#d9b77c"/><stop offset="1" stop-color="#8b6748"/></linearGradient></defs>
+      <g stroke="#ead5a8" stroke-width="2.5" fill="url(#insectBody)"><ellipse cx="72" cy="83" rx="27" ry="21"/><ellipse cx="132" cy="83" rx="35" ry="27"/><path d="M166 66Q208 54 248 76L267 86 248 99Q207 113 166 101Z"/></g>
+      <g stroke="#f2d77f" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M52 82L88 82L118 83L151 83L180 83L213 83"/><path d="M87 82L101 61L124 50M104 82L119 104L143 116M137 83L151 61L174 50M151 83L170 105L196 117M184 83L202 65L227 57M193 83L215 101L238 109"/><path d="M120 50L115 39M124 50L137 43M143 116L138 128M143 116L156 124M174 50L170 39M174 50L188 43M196 117L193 129M196 117L209 124M227 57L236 47M238 109L250 118" stroke-width="2.5"/></g>
+      <g fill="#ff9d8a" stroke="#fff0d2" stroke-width="1.5"><circle cx="59" cy="82" r="5"/><circle cx="99" cy="82" r="5"/><circle cx="140" cy="83" r="5"/><circle cx="181" cy="83" r="5"/><circle cx="220" cy="83" r="5"/></g>
+      <g fill="#d7ebfa" font-size="11"><text x="28" y="39">기문</text><path d="M45 43L58 74" stroke="#d7ebfa" fill="none"/><text x="112" y="20">굵은 기관</text><path d="M145 24L151 58" stroke="#d7ebfa" fill="none"/><text x="210" y="151">가는 기관</text><path d="M230 138L238 112" stroke="#d7ebfa" fill="none"/></g>
+      <text x="160" y="171" fill="#cfe0f2" text-anchor="middle" font-size="11">공기가 기문으로 들어와 조직 가까이 전달됨</text></svg><p class="caption">* 산소 농도 수치는 제시된 발표 자료의 설명을 따른 것입니다.</p></div>
+   </div>
+  </article>
+ </div>
+</section>
+<section class="panel" id="life" role="tabpanel">
+ <div class="section-head"><h2>02 — 생명의 진화</h2><p>해저를 누비는 절지동물과 땅 위로 올라온 초기 식물.</p></div>
+ <div class="grid">
+  <article class="card ocean-card wide">
+   <span class="tag ocean">⑤ 대표 동물 · 해양생물</span><h3>삼엽충 — 세 부분으로 나뉜 몸</h3>
+   <svg class="visual tall" viewBox="0 0 800 350" role="img" aria-label="삼엽충의 등쪽 모습. 머리방패, 반복되는 가슴마디, 꼬리방패와 가운데 축 및 양옆의 갈비 모양 마디를 나타낸 개념도">
+    <defs><linearGradient id="trilobite" x2="0" y2="1"><stop stop-color="#f0dcb0"/><stop offset="1" stop-color="#9b7a51"/></linearGradient></defs>
+    <ellipse cx="400" cy="170" rx="190" ry="135" fill="#14354b"/>
+    <g class="creature swim" transform="translate(400 164)" stroke="#f6e4bc" stroke-width="3" stroke-linejoin="round">
+     <path d="M0 -126C-54 -126 -103 -109 -119 -75C-131 -51 -122 -28 -108 -17L-117 55C-112 93 -65 123 0 130C65 123 112 93 117 55L108 -17C122 -28 131 -51 119 -75C103 -109 54 -126 0 -126Z" fill="url(#trilobite)"/>
+     <path d="M0 -119C-45 -119 -88 -105 -102 -78C-111 -59 -100 -43 -83 -34C-52 -20 -25 -25 0 -29C25 -25 52 -20 83 -34C100 -43 111 -59 102 -78C88 -105 45 -119 0 -119Z" fill="#c6a16c" stroke="#7c6044"/>
+     <ellipse cx="-68" cy="-77" rx="10" ry="13" fill="#293b48" stroke="#e7d0a1"/><ellipse cx="68" cy="-77" rx="10" ry="13" fill="#293b48" stroke="#e7d0a1"/>
+     <path d="M0 -111C-9 -85 -12 -57 -11 -27L-10 94Q0 111 10 94L11 -27C12 -57 9 -85 0 -111Z" fill="#e2c58f" stroke="#76583d"/>
+     <g fill="#b9915e" stroke="#76583d" stroke-width="3">
+      <path d="M-102 -18Q-55 -4 -12 -9L-12 7Q-58 12 -108 1Z"/><path d="M102 -18Q55 -4 12 -9L12 7Q58 12 108 1Z"/>
+      <path d="M-108 5Q-57 18 -12 13L-12 29Q-60 32 -111 21Z"/><path d="M108 5Q57 18 12 13L12 29Q60 32 111 21Z"/>
+      <path d="M-111 25Q-60 39 -12 33L-12 49Q-63 53 -113 42Z"/><path d="M111 25Q60 39 12 33L12 49Q63 53 113 42Z"/>
+      <path d="M-112 46Q-61 60 -12 53L-12 68Q-62 73 -108 62Z"/><path d="M112 46Q61 60 12 53L12 68Q62 73 108 62Z"/>
+      <path d="M-105 66Q-57 80 -12 72L-12 86Q-54 92 -96 81Z"/><path d="M105 66Q57 80 12 72L12 86Q54 92 96 81Z"/>
+     </g>
+     <path d="M-95 87Q-65 110 0 121Q65 110 95 87Q75 72 45 78L0 91L-45 78Q-75 72 -95 87Z" fill="#a98556" stroke="#76583d"/>
+     <path d="M-75 89Q-35 103 0 108Q35 103 75 89M-48 98L-42 112M48 98L42 112" fill="none" stroke="#76583d" stroke-width="3"/>
+    </g>
+    <g fill="#f7e6b9" stroke="#f7e6b9" stroke-width="2"><path d="M300 89L211 54H126" fill="none"/><circle cx="300" cy="89" r="4"/><path d="M400 147V61H485" fill="none"/><circle cx="400" cy="147" r="4"/><path d="M502 246L590 278H678" fill="none"/><circle cx="502" cy="246" r="4"/></g>
+    <g fill="#fff2ce" font-size="17" font-weight="800"><text x="68" y="50">머리방패</text><text x="493" y="55">가슴마디</text><text x="685" y="284">꼬리방패</text></g>
+    <text x="400" y="332" text-anchor="middle" fill="#9cc7df" font-size="13">가운데 축과 양옆의 마디가 뚜렷한 등쪽 모습 · 학습용 개념도</text>
+   </svg>
+   <p class="copy">삼엽충은 머리·가슴·꼬리의 세 부분으로 나뉘는 모듈형 신체 구조를 가졌다. 고생대를 상징하는 대표적인 해양 절지동물로, 바다 밑바닥에서 살았고 환경에 따라 2만 종 이상으로 다양하게 진화했다.</p>
+   <p class="copy">삼엽충은 몸을 말아 보호하는 등 포식자를 피하기 위한 다양한 형태와 생존 전략을 발달시켰다. 화석은 삼엽충의 외형과 생활 방식, 당시 해양 생태계를 추정하는 중요한 단서가 된다.</p>
+   <div class="flow"><div class="flow-box">해저 산소 공급의 단계적 증가</div><div class="arrow">→</div><div class="flow-box">복잡한 신체 구조와 활동성</div><div class="arrow">→</div><div class="flow-box">삼엽충의 초기 번성과 다양화</div></div>
+   <p class="copy">삼엽충은 캄브리아기에 크게 다양해졌으며 고생대 바다에서 중요한 역할을 했다. 해양 환경과 산소 조건은 생물의 분포와 진화에 영향을 주었지만, 삼엽충의 번성을 산소 증가 하나만으로 설명할 수는 없다.</p>
+  </article>
+  <article class="card ocean-card">
+   <span class="tag ocean">해양생물</span><h3>갑주어</h3>
+   <svg class="visual" viewBox="0 0 420 190" role="img" aria-label="갑주어의 갑옷 같은 머리와 지느러미를 표현한 그림"><g class="creature swim2" transform="translate(205 95)"><path d="M-130 0Q-90 -60 0 -42L70 -20 116 0 70 23Q-70 62 -130 0Z" fill="#a5c9d0" stroke="#e6fbff" stroke-width="3"/><path d="M-110 -20L-77 17 -30 -37 10 29 45 -27 72 15" fill="none" stroke="#4d778b" stroke-width="5"/><path d="M-20 -37L-42 -65 8 -43M15 33L-10 60 40 34" fill="#75a7b5" stroke="#c9eff6" stroke-width="2"/><path d="M111 0L147 -26 139 0 147 26Z" fill="#76a8b6"/><circle cx="-89" cy="-7" r="5" fill="#142c43"/></g><text x="210" y="177" fill="#a9d5e8" font-size="13" text-anchor="middle">갑옷처럼 단단한 머리 부분</text></svg>
+   <p class="copy">갑주어는 고생대 바다에 살았던 초기 어류 무리로, 특히 머리와 몸 앞부분을 단단한 골질판이 감싸고 있었다. 종에 따라 턱이 없었으며, 바다 바닥이나 물속에서 먹이를 찾았다.</p>
+   <p class="copy">갑옷은 포식자로부터 몸을 보호하는 데 도움이 되었을 것으로 보인다. 갑주어는 데본기에 크게 다양해졌지만, 모든 갑주어가 같은 모습이나 생활 방식을 가진 것은 아니다. 그림은 갑주어의 특징을 단순화한 개념도이다.</p>
+  </article>
+  <article class="card land-card">
+   <span class="tag land">⑥ 대표 식물 · 육상생물</span><h3>쿡소니아 — 육상 식물의 초기 모습</h3>
+   <svg class="visual tall" viewBox="0 0 420 270" role="img" aria-label="잎과 뿌리가 없는 쿡소니아의 갈라지는 줄기와 포자낭">
+    <path d="M35 232Q110 222 190 232T385 229" stroke="#6fbd91" stroke-width="5" fill="none"/><g stroke="#75c98d" stroke-width="11" stroke-linecap="round" fill="none"><path d="M210 230V93L170 53V31"/><path d="M210 143L256 103V63"/><path d="M210 187L155 151V116"/><path d="M256 103L286 77V45"/><path d="M155 151L126 123V92"/></g>
+    <g fill="#a4d9a0" stroke="#e5f5c0" stroke-width="3"><ellipse cx="170" cy="27" rx="13" ry="18"/><ellipse cx="256" cy="59" rx="13" ry="18"/><ellipse cx="286" cy="41" rx="13" ry="18"/><ellipse cx="155" cy="112" rx="13" ry="18"/><ellipse cx="126" cy="88" rx="13" ry="18"/></g>
+    <path d="M210 230L195 245M210 230L225 245" stroke="#b7d7a0" stroke-width="3" fill="none"/><text x="15" y="20" fill="#d8f7d5" font-size="13">포자낭</text><path d="M74 24H145L160 30" stroke="#d8f7d5" stroke-width="2" fill="none"/><text x="225" y="258" fill="#a7d8b5" font-size="12">잎·뿌리 없는 단순한 줄기</text>
+   </svg>
+   <p class="copy">쿡소니아는 고생대를 대표하는 초기 육상 식물이다. 초기 관다발 체계, 수분 증발을 막는 큐티클층, 기공을 발달시키며 육상 진출을 이루었다.</p>
+   <p class="copy">잎과 뿌리가 없는 수 센티미터 크기의 단순한 이분기 줄기에 포자낭을 가졌다. 이는 수중 증식을 넘어 공기 중으로 포자를 퍼뜨리는 생식 체계로의 변화를 뜻한다.</p>
+  </article>
+  <article class="card wide">
+   <span class="tag">식물의 번식 방식 변화</span><h3>물에 의존하는 포자에서 꽃가루와 종자로</h3>
+   <div class="flow">
+    <div class="flow-box"><svg viewBox="0 0 150 95" class="visual" role="img" aria-label="쿡소니아 포자낭"><path d="M75 80V35M75 55L48 33M75 45L103 22" stroke="#9ce7b0" stroke-width="6" fill="none"/><circle cx="48" cy="29" r="9" fill="#d6e9a6"/><circle cx="103" cy="18" r="9" fill="#d6e9a6"/><circle cx="75" cy="30" r="9" fill="#d6e9a6"/></svg><b>고생대 초기 식물</b><p class="copy">쿡소니아 같은 초기 육상 식물은 포자로 번식했다. 많은 포자식물은 수정에 물이 필요했다.</p></div>
+    <div class="arrow">→</div>
+    <div class="flow-box"><svg viewBox="0 0 150 95" class="visual" role="img" aria-label="겉씨식물의 잎과 종자"><path d="M75 83V18M75 37L42 22M75 48L108 28M75 59L43 45M75 68L110 51" stroke="#7fcf98" stroke-width="5" fill="none"/><g fill="#d7b56d"><ellipse cx="40" cy="20" rx="6" ry="11" transform="rotate(-50 40 20)"/><ellipse cx="108" cy="26" rx="6" ry="11" transform="rotate(50 108 26)"/><ellipse cx="43" cy="43" rx="6" ry="11" transform="rotate(-50 43 43)"/></g></svg><b>중생대 이후 겉씨식물</b><p class="copy">꽃가루와 종자를 형성해 수분 의존성을 극복하고 다양한 기후에서 번성할 진화적 기틀을 마련했다.</p></div>
+   </div>
+  </article>
+ </div>
+</section>
+<section class="panel" id="fossils" role="tabpanel">
+ <div class="section-head"><h2>03 — 화석으로 읽는 과거</h2><p>화석의 모양과 분포는 지층의 시간과 당시 환경을 알려준다.</p></div>
+ <div class="grid">
+  <article class="card">
+   <span class="tag">⑦ 표준화석</span><h3>지층의 나이를 알려주는 화석</h3>
+   <svg class="visual tall" viewBox="0 0 500 280" role="img" aria-label="삼엽충, 방추충, 필석류 화석을 각각 그린 개념 그림">
+    <g transform="translate(115 90)" class="creature" title="삼엽충 화석"><ellipse rx="52" ry="35" fill="#c8b38c" stroke="#f2dfb8" stroke-width="3"/><path d="M-42 -15Q0 -30 42 -15M-48 -2Q0 10 48 -2M-43 11Q0 22 43 11M-30 23Q0 32 30 23M0 -30V30" stroke="#796a54" stroke-width="4" fill="none"/><circle cx="-28" cy="-14" r="4" fill="#4d4a43"/><circle cx="28" cy="-14" r="4" fill="#4d4a43"/></g>
+    <g transform="translate(260 90)" class="creature" title="방추충(부술린) 화석"><ellipse rx="53" ry="28" fill="#d8c39b" stroke="#f6e7c7" stroke-width="3"/><path d="M-47 0Q-35 -22 -23 0T0 0T23 0T47 0M-36 -15Q-24 8 -12 -15T12 -15T36 -15M-36 15Q-24 -8 -12 15T12 15T36 15" fill="none" stroke="#89765a" stroke-width="3"/></g>
+    <g transform="translate(390 90)" class="creature" title="필석류 화석"><path d="M-48 -30Q-20 -12 0 0T48 30" fill="none" stroke="#d5d0b8" stroke-width="4"/><g stroke="#a69a7c" stroke-width="2" fill="#cfc4a5"><path d="M-39 -25l-11 -8 13 2Z"/><path d="M-29 -18l-10 -10 13 4Z"/><path d="M-18 -10l-8 -11 12 5Z"/><path d="M-6 -3l-6 -12 11 7Z"/><path d="M7 5l-3 -12 9 8Z"/><path d="M19 13l1 -12 7 11Z"/><path d="M31 21l4 -11 4 13Z"/><path d="M41 27l8 -8 1 13Z"/></g></g>
+    <g fill="#dbe9f5" font-size="14" text-anchor="middle"><text x="115" y="148">삼엽충</text><text x="260" y="148">방추충(부술린)</text><text x="390" y="148">필석류</text></g>
+    <path d="M40 190H460" stroke="#42617c" stroke-width="2"/><g fill="#8e7760"><rect x="40" y="204" width="420" height="16" rx="4"/><rect x="40" y="224" width="420" height="16" rx="4"/><rect x="40" y="244" width="420" height="16" rx="4"/></g><g fill="#e7d6b5"><circle cx="115" cy="212" r="4"/><ellipse cx="260" cy="232" rx="9" ry="4"/><path d="M390 235q-12 -8 -18 0t0 8t18 -8t18 8" fill="none" stroke="#e7d6b5" stroke-width="2"/></g>
+   </svg>
+   <p class="copy">대표적인 표준화석에는 삼엽충과 방추충(부술린), 필석류 등이 있다. 특히 방추충은 석탄기~페름기의 지층을 대비하는 데 유용하며, 필석류는 주로 오르도비스기~실루리아기의 지층을 구분하는 데 쓰인다. 표준화석은 생존 기간이 비교적 짧고 분포 범위가 넓으며 식별하기 쉬운 것이 유리하다.</p>
+   <p class="copy">삼엽충은 고생대 전반에 걸쳐 번성했지만, 삼엽충 전체를 하나의 표준화석으로 쓰기보다는 특정 속이나 종의 분포 시기를 확인해야 지층의 상대적 나이를 더 정확히 판단할 수 있다.</p>
+   <div class="pill-row"><span class="pill">생존 기간이 짧음</span><span class="pill">분포 면적이 넓음</span><span class="pill">개체 수가 많음</span><span class="pill">식별이 쉬움</span></div>
+  </article>
+  <article class="card wide">
+   <span class="tag">⑨ 시상화석과 환경 추론</span><h3>화석에서 서식 환경으로</h3>
+   <div class="grid">
+    <div class="card ocean-card">
+     <svg class="visual" viewBox="0 0 300 140" role="img" aria-label="산호 군락 화석과 얕은 바다 환경"><path d="M20 120H280" stroke="#69b8d3" stroke-width="3"/><g stroke="#ff9c88" stroke-width="11" stroke-linecap="round" fill="none"><path d="M150 119V66L125 45M150 88L179 63M125 45L113 26M179 63L193 42M150 66L157 37"/><path d="M85 119V85L67 70M85 100L104 83" stroke="#e8b4a4" stroke-width="8"/></g><g fill="#bcecff"><circle cx="40" cy="30" r="4"/><circle cx="250" cy="52" r="3"/><circle cx="225" cy="22" r="4"/></g></svg>
+     <b>산호 → 따뜻하고 얕은 바다(일부 종류)</b><p class="copy">산호 화석은 종류에 따라 따뜻하고 얕은 바다를 시사할 수 있다. 모든 산호가 같은 환경에서 사는 것은 아니다.</p>
+    </div>
+    <div class="card land-card">
+     <svg class="visual" viewBox="0 0 300 140" role="img" aria-label="고사리 잎과 온난 습윤한 육상 환경"><path d="M150 126Q145 70 150 18M150 52L112 35M150 68L190 45M150 84L106 69M150 100L197 78" stroke="#77d99c" stroke-width="5" fill="none"/><g stroke="#9ce7b0" stroke-width="4"><path d="M112 35L95 20M112 35L100 48M190 45L207 30M190 45L205 57M106 69L88 56M106 69L91 82M197 78L214 63M197 78L211 91"/></g><path d="M15 126Q80 113 150 126T285 125" stroke="#588d63" stroke-width="4" fill="none"/><g fill="#79c7ed"><path d="M50 22q-8 10 0 15q8-5 0-15"/><path d="M245 35q-8 10 0 15q8-5 0-15"/></g></svg>
+     <b>고사리류 → 습윤한 육상 환경</b><p class="copy">고사리류의 화석은 당시 식생과 습윤한 육상 환경을 추정하는 데 도움이 된다. 다만 화석만으로 고도나 기후를 단정하기는 어렵다.</p>
+    </div>
+    <div class="card">
+     <svg class="visual" viewBox="0 0 300 140" role="img" aria-label="물고사리 포자와 습지 가장자리"><path d="M15 105Q70 93 120 105T285 104V132H15Z" fill="#235a70"/><path d="M15 105Q70 93 120 105T285 104" stroke="#82d4df" stroke-width="3" fill="none"/><g fill="#9bd69a" stroke="#c7f0b0" stroke-width="2"><ellipse cx="85" cy="75" rx="24" ry="8" transform="rotate(-25 85 75)"/><ellipse cx="120" cy="55" rx="25" ry="8" transform="rotate(25 120 55)"/><ellipse cx="158" cy="74" rx="23" ry="8" transform="rotate(-20 158 74)"/></g><g fill="#e6d49d"><circle cx="85" cy="75" r="3"/><circle cx="120" cy="55" r="3"/><circle cx="158" cy="74" r="3"/></g><path d="M210 103V57M210 77L194 62M210 87L226 70" stroke="#7bc68d" stroke-width="5" fill="none"/></svg>
+     <b>물고사리 포자 → 얕은 호수·습지 가장자리</b><p class="copy">물고사리 포자의 서식 환경은 얕은 호수나 습지 가장자리이다.</p>
+    </div>
+    <div class="card">
+     <svg class="visual" viewBox="0 0 300 140" role="img" aria-label="서로 다른 화석과 서식 환경의 범위를 비교하는 그림"><circle cx="75" cy="65" r="34" fill="#d6c59e" stroke="#f4e4c4" stroke-width="3"/><path d="M52 65H98M75 37V93M58 49L92 81M92 49L58 81" stroke="#7c6c51" stroke-width="3"/><path d="M125 65H173M164 56L174 65 164 74" stroke="#ffd782" stroke-width="4" fill="none"/><rect x="190" y="35" width="82" height="60" rx="10" fill="#1e5770" stroke="#79c8e8" stroke-width="2"/><path d="M195 65Q220 48 245 65T268 65" stroke="#7ed9e7" stroke-width="3" fill="none"/><text x="75" y="118" fill="#d9e5f3" font-size="11" text-anchor="middle">화석</text><text x="230" y="118" fill="#d9e5f3" font-size="11" text-anchor="middle">환경</text></svg>
+     <b>조건 비교</b><p class="copy">표준화석은 생존 기간이 짧지만 넓게 분포해야 한다. 시상화석은 생존 기간은 넓지만 좁은 환경 범위를 가지는 화석이다.</p>
+    </div>
+   </div>
+   <div class="flow"><div class="flow-box">화석의 종류와 특징 관찰</div><div class="arrow">→</div><div class="flow-box">특정 환경 조건 추론</div><div class="arrow">→</div><div class="flow-box">당시 서식 환경 복원</div></div>
+  </article>
+ </div>
+</section>
+</main>
+<footer>
+ <div><strong>참고 자료</strong></div>
+ <ul class="source-list" style="display:inline-block;text-align:left;max-width:850px">
+  <li>DBpia — 「고기후 복원의 의의와 기후변화 역사」</li>
+  <li>고등학교 EBSi 통합과학 2 「지질 시대의 환경과 생물 변화」</li>
+  <li>2016년 국제 학술지 「네이처 사이언티픽 리포트」 연구</li>
+  <li>고등학교 통합과학 교과서(비상교육·미래엔), 국립중앙과학관 지질시대 화석 자료실, 카이스트 과학향기</li>
+  <li>미래엔 통합과학 2, DBpia</li>
+ </ul>
+ <div class="creator">만든 사람 · 7반 5모둠</div>
+ <p class="mini">수업 발표용 시각 자료 · 그림과 그래프는 이 HTML 안의 SVG로 제작</p>
+</footer>
+<script>
+const tabs=[...document.querySelectorAll('.tab')],panels=[...document.querySelectorAll('.panel')];
+tabs.forEach(tab=>tab.addEventListener('click',()=>{
+ tabs.forEach(t=>t.setAttribute('aria-selected',String(t===tab)));
+ panels.forEach(p=>p.classList.toggle('active',p.id===tab.dataset.tab));
+ document.querySelector('main').scrollIntoView({behavior:'smooth',block:'start'});
+}));
+document.querySelectorAll('svg .creature').forEach((el,i)=>{
+ if(!el.getAttribute('title')) el.setAttribute('title',el.closest('article')?.querySelector('h3')?.textContent||'고생대 생물');
+ el.setAttribute('tabindex','0');
+ el.setAttribute('aria-label',el.getAttribute('title'));
+});
+</script>
+</body>
+</html>
